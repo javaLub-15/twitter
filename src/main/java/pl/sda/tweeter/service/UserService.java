@@ -1,16 +1,17 @@
 package pl.sda.tweeter.service;
 
 import pl.sda.tweeter.exception.IncorrectLoginOrPassword;
+import pl.sda.tweeter.persistance.dao.UserDao;
 import pl.sda.tweeter.persistance.entities.TbUser;
 
 public class UserService {
+    private UserDao userDao = new UserDao();
 
     public TbUser getTbUser(String login, String password) throws IncorrectLoginOrPassword {
-        if (login.equals(password)) {
-
-            return new TbUser(1, login);
-        } else {
+        TbUser userByLogin = userDao.getUserByLogin(login);
+        if (userByLogin == null || !userByLogin.getPassword().equals(password)) {
             throw new IncorrectLoginOrPassword("incorrect login or password");
         }
+        return userByLogin;
     }
 }
