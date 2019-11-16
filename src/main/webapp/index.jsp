@@ -36,10 +36,8 @@
         </div>
     </div>
 
-
 </main>
-
-<footer class="container">
+<footer>
     <jsp:include page="/include/footer.jsp"/>
 </footer>
 </body>
