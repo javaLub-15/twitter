@@ -6,9 +6,6 @@
     <session-factory>
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.username">XXXXXXXXXXX</property>
-        <property name="hibernate.connection.password">XXXXXXXXXXX</property>
-        <property name="hibernate.connection.url">jdbc:mysql://remotemysql.com:3306/XXXXXXXXXXX</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
         <mapping class="pl.sda.tweeter.persistance.entities.TbUser"/>
