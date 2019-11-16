@@ -1,7 +1,7 @@
 package pl.sda.tweeter.servlet;
 
+import pl.sda.persistance.entities.TbUser;
 import pl.sda.tweeter.exception.IncorrectLoginOrPassword;
-import pl.sda.tweeter.persistance.entities.TbUser;
 import pl.sda.tweeter.service.UserService;
 
 import javax.servlet.annotation.WebServlet;

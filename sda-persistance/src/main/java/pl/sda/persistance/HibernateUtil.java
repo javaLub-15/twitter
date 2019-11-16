@@ -1,9 +1,9 @@
-package pl.sda.tweeter.persistance;
+package pl.sda.persistance;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import static pl.sda.tweeter.util.EnvironmentVariableUtil.getVariable;
+import static pl.sda.persistance.util.EnvironmentVariableUtil.getVariable;
 
 public class HibernateUtil {
 

@@ -1,4 +1,4 @@
-package pl.sda.tweeter.persistance.entities;
+package pl.sda.persistance.entities;
 
 import lombok.Data;
 

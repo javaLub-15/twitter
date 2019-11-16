@@ -1,15 +1,15 @@
-package pl.sda.tweeter.persistance.dao;
+package pl.sda.persistance.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-import pl.sda.tweeter.persistance.entities.TbUser;
+import pl.sda.persistance.entities.TbUser;
 
 import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;
 import java.io.Serializable;
 
-import static pl.sda.tweeter.persistance.HibernateUtil.getSessionFactory;
+import static pl.sda.persistance.HibernateUtil.getSessionFactory;
 
 public class UserDao implements Serializable {
     private static final long serialVersionUID = -1345744980472312709L;

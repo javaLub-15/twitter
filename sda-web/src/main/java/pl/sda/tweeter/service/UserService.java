@@ -1,8 +1,8 @@
 package pl.sda.tweeter.service;
 
+import pl.sda.persistance.dao.UserDao;
+import pl.sda.persistance.entities.TbUser;
 import pl.sda.tweeter.exception.IncorrectLoginOrPassword;
-import pl.sda.tweeter.persistance.dao.UserDao;
-import pl.sda.tweeter.persistance.entities.TbUser;
 
 import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;

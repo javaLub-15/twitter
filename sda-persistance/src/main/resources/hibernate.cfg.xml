@@ -8,6 +8,6 @@
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
-        <mapping class="pl.sda.tweeter.persistance.entities.TbUser"/>
+        <mapping class="pl.sda.persistance.entities.TbUser"/>
     </session-factory>
 </hibernate-configuration>

@@ -1,4 +1,4 @@
-package pl.sda.tweeter.util;
+package pl.sda.persistance.util;
 
 public class EnvironmentVariableUtil {
 
