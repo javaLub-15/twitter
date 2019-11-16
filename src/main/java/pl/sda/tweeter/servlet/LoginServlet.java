@@ -24,7 +24,6 @@ public class LoginServlet extends HttpServlet {
         try {
             tbUser = userService.getTbUser(login, password);
         } catch (IncorrectLoginOrPassword e) {
-            e.printStackTrace();
             response.sendRedirect("login.jsp");
             return;
         }

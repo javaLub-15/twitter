@@ -1,10 +1,7 @@
 package pl.sda.tweeter.persistance;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.Metadata;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.service.ServiceRegistry;
+import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
 
@@ -12,18 +9,18 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory() {
         try {
-            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-                    .configure("hibernate.cfg.xml")
-                    .build();
-            Metadata metadata = new MetadataSources(serviceRegistry)
-                    .getMetadataBuilder()
-                    .build();
-//            SessionFactory factory = new Configuration()
+//            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 //                    .configure("hibernate.cfg.xml")
-//                    .buildSessionFactory();
-            return metadata
-                    .getSessionFactoryBuilder()
-                    .build();
+//                    .build();
+//            Metadata metadata = new MetadataSources(serviceRegistry)
+//                    .getMetadataBuilder()
+//                    .build();
+//            return metadata
+//                    .getSessionFactoryBuilder()
+//                    .build();
+            return new Configuration()
+                    .configure()
+                    .buildSessionFactory();
         } catch (Throwable e) {
             System.err.println("Initial SessionFactory creation failed. " + e);
             throw new ExceptionInInitializerError();
@@ -32,9 +29,5 @@ public class HibernateUtil {
 
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
-    }
-
-    public static void shutDown() {
-        getSessionFactory().close();
     }
 }
